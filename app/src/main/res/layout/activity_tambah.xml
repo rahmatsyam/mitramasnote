@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context=".ui.activity.TambahActivity"
+    tools:ignore="Autofill,UselessParent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_aktivitas"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:gravity="start"
+            android:hint="@string/txt_aktivitas"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_tambah_aktivitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_tambah" />
+    </LinearLayout>
+
+</RelativeLayout>

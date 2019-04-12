@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "66321263181",
+    "firebase_url": "https://flutterfirebase-ae773.firebaseio.com",
+    "project_id": "flutterfirebase-ae773",
+    "storage_bucket": "flutterfirebase-ae773.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66321263181:android:dbd15d8988a27ead",
+        "android_client_info": {
+          "package_name": "io.github.rahmatsyam.mitramasnote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66321263181-6ehm9da7dmrnohovdpoce1bg37hqhjs4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.rahmatsyam.mitramasnote",
+            "certificate_hash": "6d79167c6946774bf42ba987953075a4f16481dc"
+          }
+        },
+        {
+          "client_id": "66321263181-er6kfq21hlsmpqj3nhvb2dg5lmhpv75c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.rahmatsyam.mitramasnote",
+            "certificate_hash": "d609441c42f1a30073c0d20c83f0da1b3829327f"
+          }
+        },
+        {
+          "client_id": "66321263181-joe9r1l6ptaesaaset28qmhi9leat4e5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBekL7N_i72ClUafvHuAgFpA0C3jcZwXx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66321263181-joe9r1l6ptaesaaset28qmhi9leat4e5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66321263181:android:0e972fc57021eba9",
+        "android_client_info": {
+          "package_name": "io.github.rahmatsyam.sevimatimeline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66321263181-dceoc933ugiea1jtna4sagp8t2dn0693.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.rahmatsyam.sevimatimeline",
+            "certificate_hash": "d609441c42f1a30073c0d20c83f0da1b3829327f"
+          }
+        },
+        {
+          "client_id": "66321263181-joe9r1l6ptaesaaset28qmhi9leat4e5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBekL7N_i72ClUafvHuAgFpA0C3jcZwXx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66321263181-joe9r1l6ptaesaaset28qmhi9leat4e5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
