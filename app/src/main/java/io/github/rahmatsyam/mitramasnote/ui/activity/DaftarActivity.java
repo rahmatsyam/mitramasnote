@@ -1,6 +1,8 @@
 package io.github.rahmatsyam.mitramasnote.ui.activity;
 
+
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -56,6 +58,14 @@ public class DaftarActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.tv_login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MasukActivity.class));
+                finish();
+            }
+        });
+
     }
 
 
@@ -64,7 +74,7 @@ public class DaftarActivity extends AppCompatActivity {
         String email = etEmail.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
         if (nama.equals("") || email.equals("") || password.equals("")) {
-            Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Field tak boleh kosong", Toast.LENGTH_SHORT).show();
         } else {
             db = new DatabaseHelper(this);
             db.addNama(new User(nama));
@@ -73,9 +83,14 @@ public class DaftarActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                FirebaseUser user = mAuth.getCurrentUser();
-                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
                                 Toast.makeText(getApplicationContext(), "User terdaftar", Toast.LENGTH_SHORT).show();
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        finish();
+                                    }
+                                }, 1200);
                             }
                         }
                     });
@@ -83,22 +98,6 @@ public class DaftarActivity extends AppCompatActivity {
 
     }
 
-   /* private void daftarUser() {
-        String nama = etNama.getText().toString().trim();
-        String email = etEmail.getText().toString().trim();
-        String password = etPassword.getText().toString().trim();
 
-        if (!TextUtils.isEmpty(nama) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
-            String id = dbUser.push().getKey();
 
-            User user = new User(id, nama, email, password);
-
-            assert id != null;
-            dbUser.child(id).setValue(user);
-
-            Toast.makeText(getApplicationContext(), "User terdaftar", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_SHORT).show();
-        }
-    }*/
 }

@@ -59,8 +59,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_5"
+                      style="@style/Widget.AppCompat.Button.Colored"
                         android:padding="@dimen/padding_8"
-                        android:text="@string/txt_masuk" />
+                        android:text="@string/txt_masuk"
+                        android:textColor="@color/colorWhite" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 

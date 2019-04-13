@@ -31,7 +31,6 @@ public class MasukActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_masuk);
 
-
         mAuth = FirebaseAuth.getInstance();
 
         dbUser = FirebaseDatabase.getInstance().getReference().child("user");
@@ -40,9 +39,7 @@ public class MasukActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
 
-
         findViewById(R.id.btn_masuk).setOnClickListener(new View.OnClickListener() {
-
 
             @Override
             public void onClick(View v) {
@@ -62,30 +59,34 @@ public class MasukActivity extends AppCompatActivity {
     }
 
     private void cekValidasi() {
-        String email = etEmail.getText().toString().trim();
-        String password = etPassword.getText().toString().trim();
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            // Log.d(TAG, "signInWithEmail:success");
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                            finish();
-                           // FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
+        String email = etEmail.getText().toString();
+        String password = etPassword.getText().toString();
 
-                            Toast.makeText(MasukActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            // updateUI(null);
+        if (email.equals("") || password.equals("")) {
+            Toast.makeText(getApplicationContext(), "Email atau password tak boleh kosong", Toast.LENGTH_SHORT).show();
+        } else {
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                finish();
+
+                            } else {
+
+
+                                Toast.makeText(MasukActivity.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+
+                            }
+
+
                         }
+                    });
+        }
 
-                        // ...
-                    }
-                });
 
     }
 

@@ -13,6 +13,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorBrown</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
     <style name="SplashTheme" parent="AppTheme.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>

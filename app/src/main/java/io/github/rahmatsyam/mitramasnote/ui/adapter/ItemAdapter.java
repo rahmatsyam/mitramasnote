@@ -12,7 +12,6 @@ import java.util.List;
 
 import io.github.rahmatsyam.mitramasnote.R;
 import io.github.rahmatsyam.mitramasnote.data.model.Note;
-import io.github.rahmatsyam.mitramasnote.ui.activity.MainActivity;
 import io.github.rahmatsyam.mitramasnote.ui.util.EmptyRecyclerView;
 
 public class ItemAdapter extends EmptyRecyclerView.Adapter<ItemAdapter.ItemViewHolder> {

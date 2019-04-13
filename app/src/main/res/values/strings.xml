@@ -9,6 +9,7 @@
     <string name="txt_tambah">Tambah</string>
     <string name="txt_done">Activity Done</string>
     <string name="txt_akun_daftar">Belum punya akun, daftar disini</string>
+    <string name="txt_akun_login">Sudah punya akun, login disini</string>
     <string name="txt_no_activity">Belum ada aktivitas</string>
     <string name="txt_halo">Hai Bro!</string>
     <string name="txt_date">Tanggal</string>

@@ -18,7 +18,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DBNAME = "db_user";
     private static final String TABLENAME = "user";
     private static final String TABLENOTE = "note";
-   // private static final String colId = "id";
     private static final String colNama = "nama";
     private static final String colAktivitas = "aktivitas";
     private static final String colDate = "date";

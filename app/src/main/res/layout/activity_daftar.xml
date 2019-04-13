@@ -7,58 +7,93 @@
     tools:context=".ui.activity.MasukActivity"
     tools:ignore="Autofill">
 
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/sv_register"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:padding="@dimen/activity_vertical_margin"
-        tools:ignore="UselessParent">
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
 
-        <android.support.v7.widget.CardView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardUseCompatPadding="true"
-            app:contentPadding="@dimen/padding_8">
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/activity_vertical_margin"
+            tools:ignore="UselessParent">
 
-            <LinearLayout
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="vertical">
+                app:cardUseCompatPadding="true"
+                app:contentPadding="@dimen/padding_8">
 
-                <EditText
-                    android:id="@+id/et_nama"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:drawable/editbox_background_normal"
-                    android:hint="@string/txt_nama"
-                    android:inputType="textPersonName" />
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/et_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:drawable/editbox_background_normal"
-                    android:hint="@string/txt_email"
-                    android:inputType="textEmailAddress" />
+                    <EditText
+                        android:id="@+id/et_nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:hint="@string/txt_nama"
+                        android:inputType="textPersonName" />
 
-                <EditText
-                    android:id="@+id/et_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:drawable/editbox_background_normal"
-                    android:hint="@string/txt_password"
-                    android:inputType="textPassword" />
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:hint="@string/txt_email"
+                        android:inputType="textEmailAddress" />
 
-                <Button
-                    android:id="@+id/btn_daftar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/txt_daftar" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:hint="@string/txt_password"
+                        android:inputType="textPassword" />
 
-    </RelativeLayout>
+                    <Button
+
+                        android:id="@+id/btn_daftar"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_daftar"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sv_register"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:background="@color/colorWhite"
+        android:divider="?android:listDivider"
+        android:orientation="vertical"
+        android:showDividers="beginning">
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/googlesans_regular"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding_8"
+            android:text="@string/txt_akun_login"
+            android:textSize="@dimen/font_size_18" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>

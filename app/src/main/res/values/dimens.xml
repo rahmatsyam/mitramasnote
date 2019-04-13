@@ -22,6 +22,7 @@
     <dimen name="placeholder_text_height">8dp</dimen>
 
     <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
     <dimen name="font_size_18">18sp</dimen>
     <dimen name="font_size_12">12sp</dimen>
     <dimen name="margin_10">10dp</dimen>
